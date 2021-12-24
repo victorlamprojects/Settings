@@ -1,5 +1,7 @@
-## ~/.vimrc
 # Vim Setup
+## ~/.vimrc
+### Linux
+```
 let g:netrw_winsize = 25
 let mapleader = " "
 
@@ -25,3 +27,8 @@ nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 
 
 let g:ctrlp_use_caching = 0
+```
+### Windows
+```
+
+```
