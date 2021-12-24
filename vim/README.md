@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
-Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 call plug#end()
 
@@ -39,10 +38,6 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
-
-" YCM
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 ```
 ### 3. Open the file using vim
 ```
@@ -73,7 +68,6 @@ call plug#begin('$HOME/vimfiles/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
-Plug 'https://github.com/ycm-core/YouCompleteMe.git'
 Plug 'mbbill/undotree'
 call plug#end()
 
@@ -97,10 +91,6 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
-
-" YCM
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 ```
 ### 3. Open the file using vim
 CMD:
