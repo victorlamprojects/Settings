@@ -5,7 +5,6 @@
 ### 2. Place the below content in ```~/.vimrc```
 ```
 syntax on
-colorscheme elflord
 set autoindent
 set relativenumber
 set cursorline
@@ -24,6 +23,7 @@ Plug 'mbbill/undotree'
 call plug#end()
 
 colorscheme gruvbox
+set background=dark
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
@@ -60,7 +60,6 @@ vim ~/.vimrc`
 ### 2. Place the below content in ```C:\Users\XXXX\.vimrc```
 ```
 syntax on
-colorscheme slate
 set autoindent
 set relativenumber
 set cursorline
@@ -79,6 +78,10 @@ Plug 'mbbill/undotree'
 call plug#end()
 
 colorscheme gruvbox
+set t_Co=256
+set background=dark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
