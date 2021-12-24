@@ -60,7 +60,7 @@ vim ~/.vimrc`
 ### 2. Place the below content in ```C:\Users\XXXX\.vimrc```
 ```
 syntax on
-colorscheme elflord
+colorscheme slate
 set autoindent
 set relativenumber
 set cursorline
@@ -100,8 +100,13 @@ nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 ```
 ### 3. Open the file using vim
+CMD:
 ```
 vim C:\Users\XXXX\.vimrc`
+```
+Powershell:
+```
+vim ~\.vimrc
 ```
 ### 4. Install plugins
 ```
