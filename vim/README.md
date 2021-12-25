@@ -5,6 +5,8 @@
 ### 2. Place the below content in ```~/.vimrc```
 ```
 syntax on
+set path+=**
+set wildmenu
 set autoindent
 set relativenumber
 set cursorline
@@ -58,6 +60,8 @@ vim ~/.vimrc`
 ### 2. Place the below content in ```C:\Users\XXXX\.vimrc```
 ```
 syntax on
+set path+=**
+set wildmenu
 set autoindent
 set relativenumber
 set cursorline
