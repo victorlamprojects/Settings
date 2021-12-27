@@ -17,6 +17,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set wildignore=*/dist*/*,*/target/*,*/builds/*,*/node_modules/*
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
@@ -72,6 +73,7 @@ set nobackup
 set undodir=$HOME/vimfiles/undodir
 set undofile
 set incsearch
+set wildignore=*/dist*/*,*/target/*,*/builds/*,*/node_modules/*
 
 call plug#begin('$HOME/vimfiles/plugged')
 Plug 'morhetz/gruvbox'
