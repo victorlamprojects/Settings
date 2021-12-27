@@ -1,8 +1,16 @@
 # Vim Setup
+1. [Linux](#Linux)
+2. [Windows](#Windows)
+
+
 ## Linux
 ### 1. Install vim-plug
 (https://github.com/junegunn/vim-plug#vim)
-### 2. Place the below content in ```~/.vimrc```
+### 2. Install ripgrep (which is much faster substitute of grep)
+```
+sudo apt-get install ripgrep
+```
+### 3. Place the below content in ```~/.vimrc```
 ```
 syntax on
 set path+=**
@@ -24,6 +32,7 @@ Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 colorscheme gruvbox
@@ -45,20 +54,30 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
 ```
-### 3. Open the file using vim
+### 4. Open the file using vim
 ```
 vim ~/.vimrc`
 ```
-### 4. Install plugins
+### 5. Install plugins
 ```
 :PlugInstall
 ```
-### 5. Create a folder ```~/.vim/undodir```
+### 6. Create a folder ```~/.vim/undodir```
 
 ## Windows
 ### 1. Install vim-plug
 (https://github.com/junegunn/vim-plug#windows-powershell)
-### 2. Place the below content in ```C:\Users\XXXX\.vimrc```
+### 2. Install ripgrep (which is much faster substitute of grep)
+```
+choco install ripgrep
+```
+*Note that if you have not installed choco, you can install it with
+
+(fyi: https://chocolatey.org/install)
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+### 3. Place the below content in ```C:\Users\XXXX\.vimrc```
 ```
 syntax on
 set path+=**
@@ -80,6 +99,7 @@ Plug 'morhetz/gruvbox'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 colorscheme gruvbox
@@ -104,7 +124,7 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
 ```
-### 3. Open the file using vim
+### 4. Open the file using vim
 CMD:
 ```
 vim C:\Users\XXXX\.vimrc`
@@ -113,8 +133,8 @@ Powershell:
 ```
 vim ~\.vimrc
 ```
-### 4. Install plugins
+### 5. Install plugins
 ```
 :PlugInstall
 ```
-### 5. Create a folder ```C:\Users\XXXX\vimfiles\undodir```
+### 6. Create a folder ```C:\Users\XXXX\vimfiles\undodir```
