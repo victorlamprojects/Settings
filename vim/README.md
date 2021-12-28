@@ -1,6 +1,7 @@
 # Vim Setup
 1. [Linux](#Linux)
 2. [Windows](#Windows)
+3. [Visual Studio Code](#VSCode)
 
 
 ## Linux
@@ -138,3 +139,43 @@ vim ~\.vimrc
 :PlugInstall
 ```
 ### 6. Create a folder ```C:\Users\XXXX\vimfiles\undodir```
+
+## Visual Studio Code <a name="VSCode"></a>
+### Append the following to settings.json
+```
+    "vim.leader": " ",
+    "vim.vimrc.enable": true,
+    "vim.useCtrlKeys": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "h"],
+            "after": [
+                "<C-w>", "h", "<CR>"
+            ]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": [
+                "<C-w>", "j", "<CR>"
+            ]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "after": [
+                "<C-w>", "k", "<CR>"
+            ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": [
+                "<C-w>", "l", "<CR>"
+            ]
+        },
+        {
+            "before": ["<leader>", "q"],
+            "after": [
+                "<C-w>", "q", "<CR>"
+            ]
+        }
+    ]
+```
