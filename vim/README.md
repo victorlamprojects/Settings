@@ -19,8 +19,8 @@ set wildmenu
 set autoindent
 set relativenumber
 set cursorline
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -86,8 +86,8 @@ set wildmenu
 set autoindent
 set relativenumber
 set cursorline
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set noswapfile
 set nobackup
 set undodir=$HOME/vimfiles/undodir
