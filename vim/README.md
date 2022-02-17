@@ -34,6 +34,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 colorscheme gruvbox
@@ -101,6 +103,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
 Plug 'jremmen/vim-ripgrep'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
 colorscheme gruvbox
