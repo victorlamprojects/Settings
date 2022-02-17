@@ -56,6 +56,7 @@ nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
+nnoremap <silent> <C-f> :Files<CR>
 ```
 ### 4. Open the file using vim
 ```
@@ -128,6 +129,7 @@ nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
+nnoremap <silent> <C-f> :Files<CR>
 ```
 ### 4. Open the file using vim
 CMD:
