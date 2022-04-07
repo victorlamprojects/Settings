@@ -16,11 +16,12 @@ sudo apt-get install ripgrep
 syntax on
 set path+=**
 set wildmenu
+set autochdir
 set autoindent
 set relativenumber
 set cursorline
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
@@ -86,11 +87,12 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 syntax on
 set path+=**
 set wildmenu
+set autochdir
 set autoindent
 set relativenumber
 set cursorline
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set noswapfile
 set nobackup
 set undodir=$HOME/vimfiles/undodir
