@@ -16,6 +16,7 @@ sudo apt-get install ripgrep
 syntax on
 set path+=**
 set wildmenu
+set splitright
 set autochdir
 set autoindent
 set relativenumber
@@ -87,6 +88,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 syntax on
 set path+=**
 set wildmenu
+set splitright
 set autochdir
 set autoindent
 set relativenumber
