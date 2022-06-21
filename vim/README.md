@@ -15,8 +15,10 @@ sudo apt-get install ripgrep
 ```
 syntax on
 set path+=**
+set nu
+set nohlsearch
+set nowrap
 set wildmenu
-set splitright
 set autochdir
 set autoindent
 set relativenumber
@@ -28,20 +30,27 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set scrolloff=8
 set wildignore=*/dist*/*,*/target/*,*/builds/*,*/node_modules/*
+set foldmethod=marker
+set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 Plug 'leafgarland/typescript-vim'
-Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
+Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 colorscheme gruvbox
 set background=dark
+highlight Normal     ctermbg=NONE
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
@@ -59,6 +68,19 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>ps :Rg<SPACE>
 nnoremap <silent> <C-f> :Files<CR>
+
+fun! TrimWhitespace() 
+    let l:save = winsaveview() 
+    keeppatterns %s/\s\+$//e 
+    call winrestview(l:save) 
+endfun 
+ 
+augroup VICTOR 
+    autocmd! 
+    autocmd VimEnter * NERDTree
+    autocmd BufWritePre * :call TrimWhitespace() 
+  augroup END
+
 ```
 ### 4. Open the file using vim
 ```
@@ -69,6 +91,7 @@ vim ~/.vimrc`
 :PlugInstall
 ```
 ### 6. Create a folder ```~/.vim/undodir```
+### 7. Install YouCompleteMe (https://github.com/ycm-core/YouCompleteMe#linux-64-bit)
 
 ## Windows
 ### 1. Install vim-plug
@@ -87,6 +110,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 syntax on
 set path+=**
+set nu
+set nowrap
+set laststatus=2
+set clipboard=unnamed
 set wildmenu
 set splitright
 set autochdir
@@ -100,10 +127,13 @@ set nobackup
 set undodir=$HOME/vimfiles/undodir
 set undofile
 set incsearch
+set scrolloff=8
 set wildignore=*/dist*/*,*/target/*,*/builds/*,*/node_modules/*
+set signcolumn=yes
 
 call plug#begin('$HOME/vimfiles/plugged')
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/kien/ctrlp.vim.git'
 Plug 'mbbill/undotree'
