@@ -24,6 +24,7 @@ sudo apt-get install ripgrep
 ### 3. Place the below content in ```~/.config/nvim/init.vim```
 ```
 syntax on
+set encoding=UTF-8
 set path+=**
 set nu
 set nowrap
@@ -61,6 +62,7 @@ Plug 'preservim/nerdtree'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 colorscheme gruvbox
@@ -102,8 +104,9 @@ endfun
 
 augroup VICTOR
     autocmd!
-	autocmd VimEnter * NERDTree
     autocmd BufWritePre * :call TrimWhitespace()
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 augroup END
 
 if has("persistent_undo")
