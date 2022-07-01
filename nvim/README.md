@@ -38,8 +38,6 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
-set undofile
 set incsearch
 set scrolloff=8
 set wildignore=*/dist*/*,*/target/*,*/builds/*,*/node_modules/*
@@ -73,6 +71,7 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 2
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+let NERDTreeShowHidden=1
 let g:ctrlp_use_caching = 0
 let mapleader = " "
 
@@ -122,8 +121,8 @@ if has("persistent_undo")
     set undofile
 endif
 
-if !isdirectory('~/.config/nvim/plugged')
-	call mkdir('~/.config/nvim/plugged', "p", 0700)
+if !isdirectory($HOME . '/.config/nvim/plugged')
+	call mkdir($HOME . '/.config/nvim/plugged', "p", 0700)
 endif
 
 lua << EOF
