@@ -19,7 +19,6 @@ set nu
 set nohlsearch
 set nowrap
 set wildmenu
-set autochdir
 set autoindent
 set relativenumber
 set cursorline
@@ -116,7 +115,6 @@ set laststatus=2
 set clipboard=unnamed
 set wildmenu
 set splitright
-set autochdir
 set autoindent
 set relativenumber
 set cursorline
