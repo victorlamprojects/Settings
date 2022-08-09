@@ -1,7 +1,7 @@
 # Linux Setup
 
 ## Table of Contents  
-1. [GNOME Theme](#thjeme)
+1. [GNOME Theme](#theme)
 2. [Editor (Vim / NVim)](#editor)
 3. [Git](#git)
 
