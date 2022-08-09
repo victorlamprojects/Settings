@@ -1,9 +1,6 @@
 # NVim Setup
-1. [Linux](#Linux)
-
-## Linux
-### 0. Install NVIM (https://github.com/neovim/neovim/releases)
-#### File Structure (https://learnvimscriptthehardway.stevelosh.com/chapters/42.html)
+## 0. Install NVIM (https://github.com/neovim/neovim/releases)
+### File Structure (https://learnvimscriptthehardway.stevelosh.com/chapters/42.html)
 ```
 $HOME/.config
 └───nvim
@@ -15,13 +12,13 @@ $HOME/.config
     │   └───plugin/     # Plugin configs
     └───colors/         # Color themes
 ```
-### 1. Install vim-plug
+## 1. Install vim-plug
 (https://github.com/junegunn/vim-plug#neovim)
-### 2. Install ripgrep (which is much faster substitute of grep)
+## 2. Install ripgrep (which is much faster substitute of grep)
 ```
 sudo apt-get install ripgrep
 ```
-### 3. Place the below content in ```~/.config/nvim/init.vim```
+## 3. Place the below content in ```~/.config/nvim/init.vim```
 ```
 syntax on
 set encoding=UTF-8
@@ -131,15 +128,15 @@ require'lspconfig'.tsserver.setup{}
 require'lspsaga'.init_lsp_saga()
 EOF
 ```
-### 4. Open the file using nvim
+## 4. Open the file using nvim
 ```
 nvim ~/.config/nvim/init.vim
 ```
-### 5. Install plugins
+## 5. Install plugins
 ```
 :PlugInstall
 ```
-### 6. Install LSP Server
+## 6. Install LSP Server
 ```
 sudo npm install -g typescript typescript-language-server
 ```
