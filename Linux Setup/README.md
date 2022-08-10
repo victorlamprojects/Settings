@@ -4,7 +4,7 @@
 1. [GNOME Theme](#theme)
 2. [Editor (Vim / NVim)](#editor)
 3. [Git](#git)
-4. [Packages] (#packages)
+4. [Packages](#packages)
 
 ## 1. GNOME Theme <a name="editor"></a>
 - follow [GNOME Theme Setup](./gnome/README.md)
