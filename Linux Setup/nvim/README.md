@@ -128,9 +128,9 @@ require'lspconfig'.tsserver.setup{}
 require'lspsaga'.init_lsp_saga()
 EOF
 ```
-## 4. Open the file using nvim
+## 4. Reload Config Files
 ```
-nvim ~/.config/nvim/init.vim
+:source $MYVIMRC
 ```
 ## 5. Install plugins
 ```
