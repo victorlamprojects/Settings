@@ -4,6 +4,7 @@
 1. [GNOME Theme](#theme)
 2. [Editor (Vim / NVim)](#editor)
 3. [Git](#git)
+4. [Packages] (#packages)
 
 ## 1. GNOME Theme <a name="editor"></a>
 - follow [GNOME Theme Setup](./gnome/README.md)
@@ -32,4 +33,13 @@ git config --global core.editor "nvim"
 (a better approach is to use GCM)
 ```
 git remote set-url origin https://[PAT-TOKEN]@github.com/[USERNAME]/[REPO-NAME].git/
+```
+## 4. Packages <a name="packages"></a>
+### 1. Update npm
+```
+sudo npm install npm -g
+```
+### 2. Install Yarn
+```
+sudo npm install --global yarn
 ```
