@@ -5,7 +5,9 @@
 2. [Editor (Vim / NVim)](#editor)
 3. [Git](#git)
 4. [Oh-My-Zsh](#oh-my-zsh)
-4. [Packages](#packages)
+5. [Packages](#packages)
+6. [Keychron Keyboard](#keychron)
+7. [Chrome Extension - Remove Youtube Ads(Optional)](#ext-remove-youtube-ads)
 
 ## 1. GNOME Theme <a name="editor"></a>
 - follow [GNOME Theme Setup](./gnome/README.md)
@@ -49,3 +51,55 @@ sudo npm install npm -g
 ```
 sudo npm install --global yarn
 ```
+
+## 6. Keychron Keyboard <a name="keychron"></a>
+### On Linux, the Keychron keyboards don't register any of the F1-F12 function keys as actual F keys, instead, treating them as multimedia keys by default.
+(https://mikeshade.com/posts/keychron-linux-function-keys/)
+### To fix this, run
+```
+echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+
+## 7. Chrome Extension - Remove Youtube Ads(Optional) <a name="ext-remove-youtube-ads"></a>
+### 1. Add `Tampermonkey` Extension
+(https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
+### 2. Click `Tampermonkey` extension
+### 3. Click `Create a new script...`
+### 4. Put the following content into the script
+```
+// ==UserScript==
+// @name         Remove Youtube Ads
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Remove Youtube Ads
+// @author       You
+// @match        https://www.youtube.com/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+
+(() => {
+    const defined = v => v !== null && v !== undefined;
+    const timeout = setInterval(() => {
+        const btn = document.querySelector('.videoAdUiSkipButton,.ytp-ad-skip-button');
+        if (btn) {
+            btn.click();
+        }
+        const popUpAddBtn = document.querySelector('.ytp-ad-overlay-close-button');
+        if (popUpAddBtn) {
+            popUpAddBtn.click();
+        }
+        const ad = [...document.querySelectorAll('.ad-showing')][0];
+        if (defined(ad)) {
+            const video = document.querySelector('video');
+            if (defined(video)) {
+                video.currentTime = video.duration;
+            }
+        }
+    }, 500);
+    return function() {
+        clearTimeout(timeout);
+    }
+})();
+```
+### 5. Save and re-open the Chrome browser
