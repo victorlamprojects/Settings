@@ -4,10 +4,12 @@
 1. [GNOME Theme](#theme)
 2. [Editor (Vim / NVim)](#editor)
 3. [Git](#git)
+4. [Oh-My-Zsh](#oh-my-zsh)
 4. [Packages](#packages)
 
 ## 1. GNOME Theme <a name="editor"></a>
 - follow [GNOME Theme Setup](./gnome/README.md)
+
 ## 2. Editor (Vim / Nvim) <a name="editor"></a>
 ### NVim (recommended)
 - nvim is more recommended as it has higher extensibility and usability
@@ -34,7 +36,11 @@ git config --global core.editor "nvim"
 ```
 git remote set-url origin https://[PAT-TOKEN]@github.com/[USERNAME]/[REPO-NAME].git/
 ```
-## 4. Packages <a name="packages"></a>
+
+## 4. Oh-My-Zsh <a name="oh-my-zsh"></a>
+- follow [Oh-My-Zsh Setup](./oh-my-zsh/README.md)
+
+## 5. Packages <a name="packages"></a>
 ### 1. Update npm
 ```
 sudo npm install npm -g
