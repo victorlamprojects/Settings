@@ -18,7 +18,9 @@ $HOME/.config
 ```
 sudo apt-get install ripgrep
 ```
-## 3. Place the below content in ```~/.config/nvim/init.vim```
+## 3. Download fonts for dev-icons
+(https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/VictorMono/Light/complete/Victor%20Mono%20Light%20Nerd%20Font%20Complete.ttf)
+## 4. Place the below content in ```~/.config/nvim/init.vim```
 ```
 syntax on
 set encoding=UTF-8
@@ -58,6 +60,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'ojroques/nvim-lspfuzzy'
 Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 colorscheme gruvbox
@@ -128,15 +132,15 @@ require'lspconfig'.tsserver.setup{}
 require'lspsaga'.init_lsp_saga()
 EOF
 ```
-## 4. Reload Config Files
+## 5. Reload Config Files
 ```
 :source $MYVIMRC
 ```
-## 5. Install plugins
+## 6. Install plugins
 ```
 :PlugInstall
 ```
-## 6. Install LSP Server
+## 7. Install LSP Server
 ```
 sudo npm install -g typescript typescript-language-server
 ```

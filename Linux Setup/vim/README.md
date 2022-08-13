@@ -11,7 +11,9 @@
 ```
 sudo apt-get install ripgrep
 ```
-### 3. Place the below content in ```~/.vimrc```
+### 3. Download fonts for dev-icons
+(https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/VictorMono/Light/complete/Victor%20Mono%20Light%20Nerd%20Font%20Complete.ttf)
+### 4. Place the below content in ```~/.vimrc```
 ```
 syntax on
 set path+=**
@@ -45,6 +47,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 colorscheme gruvbox
@@ -81,16 +86,16 @@ augroup VICTOR
   augroup END
 
 ```
-### 4. Open the file using vim
+### 5. Open the file using vim
 ```
 vim ~/.vimrc`
 ```
-### 5. Install plugins
+### 6. Install plugins
 ```
 :PlugInstall
 ```
-### 6. Create a folder ```~/.vim/undodir```
-### 7. Install YouCompleteMe (https://github.com/ycm-core/YouCompleteMe#linux-64-bit)
+### 7. Create a folder ```~/.vim/undodir```
+### 8. Install YouCompleteMe (https://github.com/ycm-core/YouCompleteMe#linux-64-bit)
 
 ## Windows
 ### 1. Install vim-plug
