@@ -45,6 +45,7 @@ git remote set-url origin https://[PAT-TOKEN]@github.com/[USERNAME]/[REPO-NAME].
 ## 5. Packages <a name="packages"></a>
 ### 1. Update npm
 ```
+sudo apt-get install npm
 sudo npm install npm -g
 ```
 ### 2. Install Yarn
