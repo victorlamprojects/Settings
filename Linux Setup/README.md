@@ -48,10 +48,9 @@ git config --global core.editor "nvim"
 ```
 ### 2. Get a personal access token from github
 (Settings->Developer settings->Personal access tokens->Generate new tokens)
-### 3. You can use the PAT as the password or update the remote url
-(a better approach is to use GCM)
+### 3. Cache Git crendentials
 ```
-git remote set-url origin https://[PAT-TOKEN]@github.com/[USERNAME]/[REPO-NAME].git/
+git config --global credential.helper manager
 ```
 
 ## 5. Oh-My-Zsh <a name="oh-my-zsh"></a>
