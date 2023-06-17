@@ -129,7 +129,7 @@ endif
 lua << EOF
 require'lspfuzzy'.setup {}
 require'lspconfig'.tsserver.setup{}
-require'lspsaga'.init_lsp_saga()
+require'lspsaga'.setup {}
 EOF
 ```
 ## 5. Reload Config Files
