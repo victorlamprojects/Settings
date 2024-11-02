@@ -50,7 +50,6 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'leafgarland/typescript-vim'
-Plug 'williamboman/mason.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf.vim'
@@ -132,7 +131,11 @@ lua << EOF
 require'lspfuzzy'.setup {}
 require'lspconfig'.tsserver.setup{}
 require'lspsaga'.setup {}
-require'mason'.setup {}
+local config = {
+    cmd = {'/opt/jdt-language-server/bin/jdtls'},
+    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+}
+require('jdtls').start_or_attach(config)
 EOF
 ```
 ## 5. Reload Config Files
