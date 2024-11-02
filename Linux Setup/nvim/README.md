@@ -50,6 +50,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'leafgarland/typescript-vim'
+Plug 'mfussenegger/nvim-jdtls'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
