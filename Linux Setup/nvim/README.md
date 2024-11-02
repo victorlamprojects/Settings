@@ -132,6 +132,7 @@ lua << EOF
 require'lspfuzzy'.setup {}
 require'lspconfig'.tsserver.setup{}
 require'lspsaga'.setup {}
+require'mason'.setup {}
 EOF
 ```
 ## 5. Reload Config Files
