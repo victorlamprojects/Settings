@@ -141,9 +141,30 @@ lua << EOF
 require'lspfuzzy'.setup {}
 require'lspconfig'.tsserver.setup{}
 require'lspsaga'.setup {}
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local workspace_dir = '/home/victor/.local/share/jdt-language-server/workspace/' .. project_name
 local config = {
-    cmd = {'/opt/jdt-language-server/bin/jdtls'},
-    root_dir = vim.fs.dirname(vim.fs.find({'gradlew', '.git', 'mvnw'}, { upward = true })[1]),
+    cmd = {
+		'java',
+		'-Declipse.application=org.eclipse.jdt.ls.core.id1',
+		'-Dosgi.bundles.defaultStartLevel=4',
+		'-Declipse.product=org.eclipse.jdt.ls.core.product',
+		'-Dlog.protocol=true',
+		'-Dlog.level=ALL',
+		'-Xmx1g',
+		'--add-modules=ALL-SYSTEM',
+		'--add-opens', 'java.base/java.util=ALL-UNNAMED',
+		'--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+		'-jar', '/home/victor/.local/share/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
+		'-configuration', '/home/victor/.local/share/jdt-language-server/config_linux',
+		'-data', workspace_dir,
+	},
+	settings = {
+		java = {}
+	},
+	init_options = {
+		bundles = {}
+	},
 }
 require('jdtls').start_or_attach(config)
 EOF
