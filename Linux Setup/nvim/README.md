@@ -6,7 +6,7 @@ sudo mkdir /opt/nvim-linux64
 tar -zvxf nvim-linux64.tar.gz
 sudo mv ./nvim-linux64 /opt/nvim-linux64
 ```
-Add the following to ~/.bashrc
+Add the following to ~/.bashrc or ~/.zshrc
 ```
 export PATH="$PATH:/opt/nvim-linux64/bin"
 ```
