@@ -1,5 +1,15 @@
 # NVim Setup
 ## 0. Install NVIM (https://github.com/neovim/neovim/releases)
+```
+cd ~/Downloads
+sudo mkdir /opt/nvim-linux64
+tar -zvxf nvim-linux64.tar.gz
+sudo mv ./nvim-linux64 /opt/nvim-linux64
+```
+Add the following to ~/.bashrc
+```
+export PATH="$PATH:/opt/nvim-linux64/bin"
+```
 ### File Structure (https://learnvimscriptthehardway.stevelosh.com/chapters/42.html)
 ```
 $HOME/.config
