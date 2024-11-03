@@ -30,7 +30,7 @@ mkdir -p ~/.config/nvim/lua/config
 mkdir -p ~/.config/nvim/lua/plugins
 ```
 
-## 1. vim config setup ``~/.config/nvim/lua/config/options.lua```
+## 1. vim config setup ```~/.config/nvim/lua/config/options.lua```
 ```
 -- Left column and similar settings
 vim.opt.number = true
