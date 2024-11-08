@@ -240,8 +240,8 @@ local function setup_jdtls()
 
     -- Create a table called init_options to pass the bundles with debug and testing jar, along with the extended client capablies to the start or attach function of JDTLS
     local init_options = {
-        -- bundles = bundles,
-        -- extendedClientCapabilities = extendedClientCapabilities
+        bundles = bundles,
+        extendedClientCapabilities = extendedClientCapabilities
     }
 
     -- Function that will be ran once the language server is attached
