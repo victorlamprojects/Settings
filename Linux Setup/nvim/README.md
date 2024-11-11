@@ -6,9 +6,9 @@ $HOME/.config
     └───init.lua        	# Root configuration using lua
     └───lua   				# lua setup
         └───config      	# lazyvim config
-		│   ├── jdtls.lua 	# jdtls config
+	│   ├── jdtls.lua 	# jdtls config
         │   ├── options.lua	# vim configs
-		│   └── keymaps.lua	# Key mappings
+	│   └── keymaps.lua	# Key mappings
         └───plugins     	# Plugins
 ```
 
