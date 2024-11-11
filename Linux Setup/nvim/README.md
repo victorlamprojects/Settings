@@ -26,7 +26,7 @@ $HOME/.config
      ```
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
-     export PATH=$PATH:/opt/gradle-8.11/bin
+     export PATH=$PATH:/opt/gradle/gradle-8.11/bin
      ```
 ## 2. Java
    - [Optional] Run the following to clean up previously installed JDK
