@@ -13,6 +13,10 @@ $HOME/.config
 ```
 
 ## 1. Gradle
+   - [Optional] Run the following to clean up previously installed Gradle
+     ```
+     sudo rm -rf /opt/gradle/*
+     ```
    - Download (e.g. gradle-8.10.2): https://gradle.org/releases/
    - Install the package:
      ```
@@ -35,10 +39,6 @@ $HOME/.config
      sudo tar -C /usr/lib/jvm -xvf openjdk-23.0.1_linux-x64_bin.tar.gz
      sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-23.0.1/bin/java" 1
      sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-23.0.1/bin/javac" 1
-     ```
-   - [Optional] Run the following to clean up previously installed Gradle
-     ```
-     sudo rm -rf /opt/gradle/*
      ```
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
