@@ -31,6 +31,7 @@ $HOME/.config
    - Download latest JDK (e.g. jdk-23.0.1): https://jdk.java.net/23/
      ```
      cd ~/Downloads
+     sudo mkdir -p /usr/lib/jvm/jdk-23.0.1
      sudo tar -C /usr/lib/jvm/jdk-23.0.1 -xvf openjdk-23.0.1_linux-x64_bin.tar.gz
      sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-23.0.1/bin/java" 1
      sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-23.0.1/bin/javac" 1
