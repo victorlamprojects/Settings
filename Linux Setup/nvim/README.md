@@ -21,7 +21,7 @@ $HOME/.config
      ls -lhtr /opt/gradle/gradle-8.10.2
      ```
 ## 2. Java
-   - [Option] Run the following to clean up previously installed JDK
+   - [Optional] Run the following to clean up previously installed JDK
      ```
      dpkg-query -W -f='${binary:Package}\n' | grep -E -e '^(ia32-)?(sun|oracle)-java' -e '^openjdk-' -e '^icedtea' -e '^(default|gcj)-j(re|dk)' -e '^gcj-(.*)-j(re|dk)' -e '^java-common' | xargs sudo apt-get -y remove
      sudo apt-get -y autoremove
@@ -34,6 +34,10 @@ $HOME/.config
      sudo tar -C /usr/lib/jvm/jdk-23.0.1 -xvf openjdk-23.0.1_linux-x64_bin.tar.gz
      sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-23.0.1/bin/java" 1
      sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-23.0.1/bin/javac" 1
+     ```
+   - [Optional] Run the following to clean up previously installed Gradle
+     ```
+     sudo rm -rf /opt/gradle/*
      ```
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
