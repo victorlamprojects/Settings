@@ -17,12 +17,16 @@ $HOME/.config
      ```
      sudo rm -rf /opt/gradle/*
      ```
-   - Download (e.g. gradle-8.10.2): https://gradle.org/releases/
+   - Download (e.g. gradle-8.11): https://gradle.org/releases/
    - Install the package:
      ```
      cd ~/Downloads
-     sudo unzip -d /opt/gradle gradle-8.10.2-all.zip
-     ls -lhtr /opt/gradle/gradle-8.10.2
+     sudo unzip -d /opt/gradle gradle-8.11-all.zip
+     ls -lhtr /opt/gradle/gradle-8.11
+     ```
+   - Add the following to ~/.bashrc or ~/.zshrc
+     ```
+     export PATH=$PATH:/opt/gradle-8.11/bin
      ```
 ## 2. Java
    - [Optional] Run the following to clean up previously installed JDK
@@ -39,11 +43,11 @@ $HOME/.config
      sudo tar -C /usr/lib/jvm -xvf openjdk-23.0.1_linux-x64_bin.tar.gz
      sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk-23.0.1/bin/java" 1
      sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk-23.0.1/bin/javac" 1
+     ls -lhtr /usr/lib/jvm
      ```
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
      export JAVA_HOME=/usr/lib/jvm/jdk-23.0.1
-     export PATH=$PATH:/opt/gradle-8.10.2/bin
      ```
 
 ## 3. Install NVIM 
