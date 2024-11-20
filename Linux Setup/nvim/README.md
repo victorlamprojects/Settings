@@ -11,8 +11,8 @@ $HOME/.config
 	│   └── keymaps.lua	# Key mappings
         └───plugins     	# Plugins
 ```
-
-## 1. Gradle
+## 1. Java Build Automation Tool 
+### 1. Gradle
    - [Optional] Run the following to clean up previously installed Gradle
      ```
      sudo rm -rf /opt/gradle/*
@@ -27,6 +27,20 @@ $HOME/.config
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
      export PATH=$PATH:/opt/gradle/gradle-8.11/bin
+     ```
+### 2. Maven
+   - Download (e.g. apache-maven-3.9.9-bin.tar.gz): https://maven.apache.org/download.cgi
+   - Install the package:
+     ```
+     cd ~/Downloads
+     sudo tar -C /opt -xvf apache-maven-3.9.9-bin
+     sudo ln -s /opt/apache-maven-3.9.9 /opt/maven
+     ls -lhtr /opt/maven
+     ```
+   - Add the following to ~/.bashrc or ~/.zshrc
+     ```
+     export M2_HOME=/opt/maven
+     export PATH=$PATH:$M2_HOME/bin
      ```
 ## 2. Java
    - [Optional] Run the following to clean up previously installed JDK
