@@ -5,6 +5,9 @@ return {
         require("nvim-tree").setup({
             hijack_netrw = true,
             auto_reload_on_write = true,
+            update_focused_file = {
+                enable = true,
+            },
         })
     end
 }
