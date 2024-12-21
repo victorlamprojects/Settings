@@ -14,7 +14,13 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "ts_ls", "jdtls", "cssls" },
+                ensure_installed = {
+                    "lua_ls",
+                    "ts_ls",
+                    "jdtls",
+                    "cssls",
+                    "pyright",
+                },
             })
         end
     },
@@ -40,7 +46,7 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
 
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             -- setup the lua language server
             lspconfig.lua_ls.setup({
@@ -56,6 +62,11 @@ return {
             lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
+
+            -- setup the python language server
+            lspconfig.pyright.setup({
+                capabilities = capabilities
+            })
 
             -- Key map for showing code documentation
             vim.keymap.set("n", "<leader>ch", vim.lsp.buf.hover, { desc = "[C]ode [H]over Documentation" })
