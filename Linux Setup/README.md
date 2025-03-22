@@ -56,8 +56,8 @@ git config --global credential.helper manager
 ## 5. Oh-My-Zsh <a name="oh-my-zsh"></a>
 - follow [Oh-My-Zsh Setup](./oh-my-zsh/README.md)
 
-## 6. Keychron Keyboard <a name="keychron"></a>
-### On Linux, the Keychron keyboards don't register any of the F1-F12 function keys as actual F keys, instead, treating them as multimedia keys by default.
+## 6. Keyboard <a name="keychron"></a>
+### On Linux, some keyboards don't register any of the F1-F12 function keys as actual F keys, instead, treating them as multimedia keys by default.
 (https://mikeshade.com/posts/keychron-linux-function-keys/)
 ### To fix this, run
 ```
