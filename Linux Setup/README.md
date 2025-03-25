@@ -6,7 +6,7 @@
 3. [Editor (Vim / NVim)](#editor)
 4. [Git](#git)
 5. [Oh-My-Zsh](#oh-my-zsh)
-6. [Keychron Keyboard](#keychron)
+6. [Keyboard](#keychron)
 7. [Chrome Extension - Remove Youtube Ads(Optional)](#ext-remove-youtube-ads)
 
 ## 1. Packages <a name="packages"></a>
