@@ -30,12 +30,12 @@ sudo n latest
 
 ## 3. Nerd Fonts <a name="nerd-fonts"></a>
 - Go to https://www.nerdfonts.com/font-downloads
-- Choose "SpaceMono"
-- Unzip the file and double click on "SpaceMonoNerdFontMono-Regular.ttf"
+- Choose "JetBrainsMono"
+- Unzip the file and double click on "JetBrainsMonoNerdFont-Light.ttf"
 - Click install
 - Run `sudo fc-cache -fv`
 - Open "Tweaks"
-- In Monospace text, choose "SpaceMono Nerd Font Mono"
+- In Monospace text, choose "JetBrainsMono Nerd Font Light"
 
 ## 4. Editor (Vim / Nvim) <a name="editor"></a>
 ### NVim (recommended)
