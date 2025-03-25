@@ -3,11 +3,12 @@
 ## Table of Contents  
 1. [Packages](#packages)
 2. [GNOME Theme](#theme)
-3. [Editor (Vim / NVim)](#editor)
-4. [Git](#git)
-5. [Oh-My-Zsh](#oh-my-zsh)
-6. [Keyboard](#keychron)
-7. [Chrome Extension - Remove Youtube Ads(Optional)](#ext-remove-youtube-ads)
+3. [Nerd Fonts](#nerd-fonts)
+4. [Editor (Vim / NVim)](#editor)
+5. [Git](#git)
+6. [Oh-My-Zsh](#oh-my-zsh)
+7. [Keyboard](#keychron)
+8. [Chrome Extension - Remove Youtube Ads(Optional)](#ext-remove-youtube-ads)
 
 ## 1. Packages <a name="packages"></a>
 ### 0. Install packages
@@ -23,22 +24,27 @@ sudo npm install -g n
 sudo n stable
 sudo n latest
 ```
-### 2. Install Yarn
-```
-sudo npm install --global yarn
-```
 
 ## 2. GNOME Theme <a name="theme"></a>
 - follow [GNOME Theme Setup](./gnome/README.md)
 
-## 3. Editor (Vim / Nvim) <a name="editor"></a>
+## 3. Nerd Fonts <a name="nerd-fonts"></a>
+- Go to https://www.nerdfonts.com/font-downloads
+- Choose "SpaceMono"
+- Unzip the file and double click on "SpaceMonoNerdFontMono-Regular.ttf"
+- Click install
+- Run `sudo fc-cache -fv`
+- Open "Tweaks"
+- In Monospace text, choose "SpaceMono Nerd Font Mono"
+
+## 4. Editor (Vim / Nvim) <a name="editor"></a>
 ### NVim (recommended)
 - nvim is more recommended as it has higher extensibility and usability
 - follow [NVIM Setup](./nvim/README.md)
 ### Vim
 - follow [VIM Setup](./nvim/README.md)
 
-## 4. Git/Github <a name="git"></a>
+## 5. Git/Github <a name="git"></a>
 ### 1. Configure git
 (replace nvim with vim if you want to use vim)
 ```
@@ -53,10 +59,10 @@ git config --global core.editor "nvim"
 git config --global credential.helper manager
 ```
 
-## 5. Oh-My-Zsh <a name="oh-my-zsh"></a>
+## 6. Oh-My-Zsh <a name="oh-my-zsh"></a>
 - follow [Oh-My-Zsh Setup](./oh-my-zsh/README.md)
 
-## 6. Keyboard <a name="keychron"></a>
+## 7. Keyboard <a name="keychron"></a>
 ### On Linux, some keyboards don't register any of the F1-F12 function keys as actual F keys, instead, treating them as multimedia keys by default.
 (https://mikeshade.com/posts/keychron-linux-function-keys/)
 ### To fix this, run
@@ -64,7 +70,7 @@ git config --global credential.helper manager
 echo 0 | sudo tee /sys/module/hid_apple/parameters/fnmode
 ```
 
-## 7. Chrome Extension - Remove Youtube Ads(Optional) <a name="ext-remove-youtube-ads"></a>
+## 8. Chrome Extension - Remove Youtube Ads(Optional) <a name="ext-remove-youtube-ads"></a>
 ### 1. Add `Tampermonkey` Extension
 (https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
 ### 2. Click `Tampermonkey` extension
