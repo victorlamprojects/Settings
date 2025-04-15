@@ -65,6 +65,17 @@ $HOME/.config
      ```
 
 ## 3. Install NVIM 
+   - [Optional] Run the following to clean up previously installed NVIM
+     ```
+     sudo rm /usr/bin/nvim
+     sudo rm -rf /opt/nvim*
+     sudo rm -rf /usr/lib/nvim
+     rm -rf /usr/share/nvim
+     rm -rf ~/.config/nvim
+     rm -rf ~/.local/share/nvim
+     rm -rf ~/.local/state/nvim
+     rm -rf ~/.cache/nvim
+     ```
    - Download latest NVIM: https://github.com/neovim/neovim/blob/master/INSTALL.md
      ```
      cd ~/Downloads
