@@ -68,11 +68,12 @@ $HOME/.config
    - Download latest NVIM: https://github.com/neovim/neovim/blob/master/INSTALL.md
      ```
      cd ~/Downloads
-     sudo tar -C /opt -zvxf nvim-linux64.tar.gz
+     sudo tar -C /opt -zvxf nvim-linux-x86_64.tar.gz
+     sudo cp /opt/nvim-linux-x86_64/bin/nvim /usr/bin/nvim
      ```
    - Add the following to ~/.bashrc or ~/.zshrc
      ```
-     export PATH=$PATH:/opt/nvim-linux64/bin
+     export PATH=$PATH:/opt/nvim-linux-x86_64/bin
      ```
    - Setup NVIM (options, plugins, etc.)
      ```
